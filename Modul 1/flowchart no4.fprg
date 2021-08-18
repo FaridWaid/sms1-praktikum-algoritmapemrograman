@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Farid Waid"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-09-28 07:16:07 PM"/>
+        <attribute name="created" value="RmFyaWQgV2FpZDtERVNLVE9QLVVUQ0QyOUE7MjAxOS0wOS0yODswNjo1MToxMiBQTTszMjU2"/>
+        <attribute name="edited" value="RmFyaWQgV2FpZDtERVNLVE9QLVVUQ0QyOUE7MjAxOS0wOS0yODswNzoxNjowNyBQTTsxOzMzNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nama" type="String" array="False" size=""/>
+            <declare name="NIM" type="Real" array="False" size=""/>
+            <declare name="UTS, UAS, RERATA" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukan Nama :&quot;" newline="True"/>
+            <input variable="Nama"/>
+            <output expression="&quot;Masukan NIM :&quot;" newline="True"/>
+            <input variable="NIM"/>
+            <output expression="&quot;Masukan Nilai UTS :&quot;" newline="True"/>
+            <input variable="UTS"/>
+            <output expression="&quot;masukan nilai UAS&quot;" newline="True"/>
+            <input variable="UAS"/>
+            <assign variable="Rerata" expression="(UTS+UAS)/2"/>
+            <output expression="&quot;Nama anda :&quot; &amp;Nama" newline="True"/>
+            <output expression="&quot;NIM anda :&quot; &amp;NIM" newline="True"/>
+            <output expression="&quot;Nilai Rata-rata anda :&quot; &amp;Rerata" newline="True"/>
+            <if expression="100 &gt;= Rerata and Rerata &gt;= 80">
+                <then>
+                    <output expression="&quot;Anda mendapatkan nilai A&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="80 &gt; Rerata and Rerata &gt;= 70">
+                        <then>
+                            <output expression="&quot;Anda mendapatkan nilai B&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="70 &gt;= Rerata and Rerata &gt;= 60">
+                                <then>
+                                    <output expression="&quot;Anda mendapatkan nilai C&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="60 &gt; Rerata and Rerata &gt;= 40">
+                                        <then>
+                                            <output expression="&quot;Anda mendapatkan nilai D&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Anda mendapatkan nilai E&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
